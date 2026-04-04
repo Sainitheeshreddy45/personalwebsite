@@ -7,6 +7,8 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
+    base: '/personalwebsite/',
+    plugins: [react()],
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
