@@ -19,7 +19,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', upd
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/personalwebsite">
       <App />
     </BrowserRouter>
   </StrictMode>,
