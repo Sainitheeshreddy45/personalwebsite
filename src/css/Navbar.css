@@ -1,0 +1,180 @@
+/* --- Navbar Container --- */
+.custom-nav {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.custom-nav  .container {
+  margin: 6px;
+}
+
+.navbar-brand {
+  justify-content: space-between;
+}
+
+[data-bs-theme="dark"] .custom-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-text {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: inherit;
+}
+
+/* --- Nav Links --- */
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #64748b !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #4caf50 !important;
+}
+
+[data-bs-theme="dark"] .nav-link:hover {
+  color: #4caf50 !important;
+}
+
+/* --- Theme Toggle --- */
+.mode-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.track {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  background: #e2e8f0;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .track {
+  background: #334155;
+}
+
+.knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1e293b; /* Light mode knob color */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+}
+
+.mode-toggle.dark .knob {
+  transform: translateX(26px);
+  background: #ffffff; /* Dark mode knob color */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sun-icon { color: #fff; }
+.moon-icon { color: #1e293b; }
+
+/* Hide inactive icons slightly for elegance */
+.mode-toggle.light .moon-icon { opacity: 0.3; }
+.mode-toggle.dark .sun-icon { opacity: 0.3; }
+/* 1. The Track Container */
+.track {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px; /* Space for icons at the edges */
+  background: #e2e8f0; /* Light mode track */
+  transition: background 0.3s ease;
+}
+
+/* 2. The Icons - HIGHER Z-INDEX */
+.icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* Sit above the knob */
+  pointer-events: none; /* Clicks go through to the button */
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* 3. The Knob - LOWER Z-INDEX */
+.knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1e293b; /* White circle */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 2; /* Sit below icons */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* LIGHT MODE */
+.mode-toggle.light .knob {
+  background: #1e293b; /* Dark Knob */
+}
+
+.mode-toggle.light .sun-icon {
+  color: #f59e0b; /* White sun to pop against the dark knob */
+  opacity: 1;
+}
+
+/* DARK MODE */
+.mode-toggle.dark .track {
+  background: #334155; /* Slightly lighter track for dark mode */
+}
+
+.mode-toggle.dark .knob {
+  transform: translateX(26px);
+  background: #ffffff; /* White Knob */
+}
+
+.mode-toggle.dark .moon-icon {
+  color: #1e293b; /* Dark moon to pop against the white knob */
+  opacity: 1;
+}
+
+/* Remove default button styling and focus rings */
+.mode-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none; /* Removes the focus box */
+  -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile */
+}
+
+/* Optional: Add a subtle focus state for accessibility 
+   instead of a harsh box */
+.mode-toggle:focus-visible .track {
+  box-shadow: 0 0 0 2px #3b82f6; 
+}
