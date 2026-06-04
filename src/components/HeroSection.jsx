@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../css/HeroSection.css";
 
 
@@ -68,7 +69,7 @@ function HeroSection() {
                         <a href="https://github.com/nullsniper45/personalwebsite/blob/main/public/SainitheeshReddy_Resume.pdf" download="SainitheeshReddy_Resume.pdf">
                             <button className="btn btn-primary" >Download CV</button>
                         </a>
-                        <a to="/contact" className="btn btn-secondary">Contact</a>
+                        <Link className="btn btn-secondary" to="/contact">Contact</Link>
                     </div>
                 </div>
             </section>

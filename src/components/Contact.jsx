@@ -11,8 +11,8 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm(process.env.VITE_EMAILJS_SERVICE_ID, process.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
-        publicKey: process.env.VITE_EMAILJS_PUBLIC_KEY
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       })
       .then(
         () => {
