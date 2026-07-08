@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './index.css'
 import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
-
+import { HashRouter } from 'react-router-dom' // 1. Changed from BrowserRouter
 
 const updateTheme = () => {
   const savedTheme = localStorage.getItem('user-theme');
@@ -19,8 +18,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', upd
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/personalwebsite">
+    {/* 2. HashRouter handles your base sub-folder automatically, so remove basename */}
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
