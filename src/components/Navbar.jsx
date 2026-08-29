@@ -4,8 +4,8 @@ import '../css/Navbar.css';
 
 const Navbar = () => {
     const LOGO_URLS = {
-        dark: "https://raw.githubusercontent.com/nullsniper45/personalwebsite/main/src/assets/logo2.png",
-        light: "https://raw.githubusercontent.com/nullsniper45/personalwebsite/main/src/assets/logo1.png"
+        dark: "https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/src/assets/logo2.png",
+        light: "https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/src/assets/logo1.png"
     };
 
     const [theme, setThemeState] = useState(() => {
