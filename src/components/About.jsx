@@ -70,7 +70,8 @@ const icons = [
 
 const IconCarousel = () => {
 
-    const aboutImage = "https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/src/assets/Person.svg";
+  const hero = "";
+    const aboutImage = "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/heroimg.jpg";
   return (
     <>
       <section className="about-section container py-5">

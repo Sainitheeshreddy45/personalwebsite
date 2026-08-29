@@ -6,8 +6,7 @@ import "../css/HeroSection.css";
 const titles = ["Web Developer", "Full Stack Developer"];
 
 function HeroSection() {
-    const hero = "https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/src/assets/heroimg.jpg";
-
+    const hero = "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/heroimg.jpg";
     const [text, setText] = useState("");
     const [titleIndex, setTitleIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
