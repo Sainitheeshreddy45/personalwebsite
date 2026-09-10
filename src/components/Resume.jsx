@@ -80,22 +80,40 @@ export default function Resume() {
       <div className="container">
         {/* Certificates Section */}
         <section className="section">
-          <h2 className="section-title">Certificates</h2>
-          <div className="grid-layout">
-            <CertificateCard
-              logo="Java"
-              title="Professional Java Developer"
-              id="Infosys"
-              date="21 January 2021"
-            />
-            <CertificateCard
-              logo="SpringBoot"
-              title="Professional Springboot Devloper"
-              id="Infosys"
-              date="7 April 2021"
-            />
-          </div>
-        </section>
+  <h2 className="section-title">Certificates</h2>
+  <div className="grid-layout">
+    <CertificateCard
+      logo="HackerRank"
+      title="HackerRank SQL (Advanced)"
+      id="HackerRank"
+      date=""
+    />
+    <CertificateCard
+      logo="Microsoft"
+      title="Microsoft Azure AI Essentials Professional Certificate"
+      id="Microsoft & LinkedIn"
+      date=""
+    />
+    <CertificateCard
+      logo="Microsoft"
+      title="Microsoft Azure Essentials"
+      id="Microsoft Press"
+      date=""
+    />
+    <CertificateCard
+      logo="AWS"
+      title="AWS Cloud Quest: Cloud Practitioner"
+      id="AWS"
+      date=""
+    />
+    <CertificateCard
+      logo="JPMorganChase"
+      title="Software Engineering Job Simulation"
+      id="JPMorganChase"
+      date=""
+    />
+  </div>
+</section>
 
         {/* Skills Section */}
         <div className="grid-layout">
