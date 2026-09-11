@@ -3,75 +3,75 @@ import "../css/Resume.css";
 export default function Resume() {
   return (
     <>
-      <div class="main-header">
-        <h1 class="page-title">Resume</h1>
-        <span class="experience-badge">3.8 Years of Experience</span>
+      <div className="main-header">
+        <h1 className="page-title">Resume</h1>
+        <span className="experience-badge">3.8+ Years of Experience</span>
       </div>
-      <div class="resume-container">
-        <div class="column">
-          <h2 class="section-title">Education</h2>
+      
+      <div className="resume-container">
+        {/* Education Column */}
+        <div className="column">
+          <h2 className="section-title">Education</h2>
 
-          <div class="timeline-item wide-date">
-            <div class="timeline-date-pill">2017-21</div>
-            <div class="timeline-meta">
-              Mallareddy Institute of Technology and sciences
+          <div className="timeline-item wide-date">
+            <div className="timeline-date-pill">2017 - 2021</div>
+            <div className="timeline-meta">
+              Malla Reddy Institute of Technology and Sciences
             </div>
-            <h3 class="timeline-title">Computer Science & Engineering</h3>
-            <p class="timeline-text">
-              Persued my Bachelor's degree in computer science and engineering
-              from esteemed MRITS, Secundrabad with an aggregate of 7.41 CGPa
+            <h3 className="timeline-title">Computer Science & Engineering</h3>
+            <p className="timeline-text">
+              Pursued my Bachelor's degree in Computer Science and Engineering
+              from MRITS, Hyderabad with an aggregate of 7.41 CGPA.
             </p>
           </div>
 
           <TimelineCard
-            year="2017"
+            year="2015 - 2017"
             college="Narayana Junior College"
-            role="MPC"
-            description="Persued my Intermediate education from Narayan junior College, Hyderabad in MPC with an aggregate oof 96.4%"
+            role="MPC (Intermediate)"
+            description="Completed my Intermediate education from Narayana Junior College, Hyderabad in MPC with an aggregate of 96.4%."
           />
 
-          <div class="timeline-item">
-            <div class="timeline-date-pill">2015</div>
-            <div class="timeline-meta">Sharada High School</div>
-            <h3 class="timeline-title">SSC</h3>
-            <p class="timeline-text">
-              FInished my schooling from Sharada High School, Nagarkurnool, with
+          <div className="timeline-item">
+            <div className="timeline-date-pill">2015</div>
+            <div className="timeline-meta">Sharada High School</div>
+            <h3 className="timeline-title">SSC</h3>
+            <p className="timeline-text">
+              Finished my schooling from Sharada High School, Nagarkurnool, with
               an aggregate of 9.7 CGPA.
             </p>
           </div>
         </div>
 
-        <div class="column">
-          <h2 class="section-title">Experience</h2>
+        {/* Experience Column */}
+        <div className="column">
+          <h2 className="section-title">Experience</h2>
 
-          <div class="timeline-item wide-date">
-            <div class="timeline-date-pill">2021 - 2023</div>
-            <div class="timeline-meta">Infosys</div>
-            <h3 class="timeline-title">Senior Systems Engineer</h3>
-            <p class="timeline-text">
-              Worked as an BackEnd Developer, Executed development tasks with
-              100% SLA adherence, establishing a strong foundation in
-              banking-grade software reliability. Developed API endpoints from
-              scratch following Test-Driven Development (TDD) principles.
-              Optimized service calls and data structures to reduce
-              organizational costs. Wrote comprehensive unit tests to ensure
-              code reliability and high accuracy in production.
+          <div className="timeline-item wide-date">
+            <div className="timeline-date-pill">2021 - 2023</div>
+            <div className="timeline-meta">Infosys</div>
+            <h3 className="timeline-title">Systems Engineer</h3>
+            <p className="timeline-text">
+              Worked as a Backend Developer on Bulgarian Banking Project.
+              Executed development tasks with 100% SLA adherence, establishing a
+              strong foundation in banking-grade software reliability. Developed
+              15+ core REST API endpoints from scratch following Test-Driven
+              Development (TDD) principles with JUnit and Mockito. Optimized database query
+              indexing to cut CPU/memory overhead by ~25%.
             </p>
           </div>
 
-          <div class="timeline-item wide-date">
-            <div class="timeline-date-pill">2023 - 2025</div>
-            <div class="timeline-meta">Infosys</div>
-            <h3 class="timeline-title">Senior Systems Engineer</h3>
-            <p class="timeline-text">
-              During my tenure on an enterprise-level Intel project, 
-              I progressed into a role focused on the design and optimization of large-scale backend systems. 
-              I spearheaded efforts to enhance application efficiency, 
-              successfully achieving a ~50% reduction in API response times through meticulous backend tuning. 
-              My technical contributions included implementing messaging queues for seamless asynchronous communication and 
-              integrating Elasticsearch to provide high-speed search capabilities across the platform.
-              To ensure system reliability and security, I utilized AWS CloudWatch for real-time performance monitoring, 
-              implemented JWT-based authentication, and maintained a high standard of code quality through robust unit testing with Mockito.
+          <div className="timeline-item wide-date">
+            <div className="timeline-date-pill">09/2021 - 04/2025</div>
+            <div className="timeline-meta">Infosys</div>
+            <h3 className="timeline-title">Systems Engineer (Intel IPOS-Central)</h3>
+            <p className="timeline-text">
+              Progressed into designing and optimizing large-scale backend systems.
+              Spearheaded backend data re-engineering using parallel execution patterns,
+              slashing API response times by 40-50%. Architected enterprise microservices
+              using Spring Boot, gRPC, and Amazon SQS for decoupled asynchronous messaging.
+              Integrated Elasticsearch with DynamoDB to deliver sub-second search across 1M+ records,
+              enforced JWT security, and maintained high code quality via SonarQube.
             </p>
           </div>
         </div>
@@ -80,53 +80,55 @@ export default function Resume() {
       <div className="container">
         {/* Certificates Section */}
         <section className="section">
-  <h2 className="section-title">Certificates</h2>
-  <div className="grid-layout">
-    <CertificateCard
-      logo="HackerRank"
-      title="HackerRank SQL (Advanced)"
-      id="HackerRank"
-      date=""
-    />
-    <CertificateCard
-      logo="Microsoft"
-      title="Microsoft Azure AI Essentials Professional Certificate"
-      id="Microsoft & LinkedIn"
-      date=""
-    />
-    <CertificateCard
-      logo="Microsoft"
-      title="Microsoft Azure Essentials"
-      id="Microsoft Press"
-      date=""
-    />
-    <CertificateCard
-      logo="AWS"
-      title="AWS Cloud Quest: Cloud Practitioner"
-      id="AWS"
-      date=""
-    />
-    <CertificateCard
-      logo="JPMorganChase"
-      title="Software Engineering Job Simulation"
-      id="JPMorganChase"
-      date=""
-    />
-  </div>
-</section>
+          <h2 className="section-title">Certificates & Badges</h2>
+          <div className="certificates-grid">
+            <CertificateCard
+              logo="HackerRank"
+              title="HackerRank SQL (Advanced)"
+              issuer="HackerRank"
+              badge="Verified"
+            />
+            <CertificateCard
+              logo="Microsoft"
+              title="Azure AI Essentials Professional Certificate"
+              issuer="Microsoft & LinkedIn"
+              badge="Professional Cert"
+            />
+            <CertificateCard
+              logo="Microsoft"
+              title="Microsoft Azure Essentials"
+              issuer="Microsoft Press"
+              badge="Verified"
+            />
+            <CertificateCard
+              logo="AWS"
+              title="AWS Cloud Quest: Cloud Practitioner"
+              issuer="Amazon Web Services"
+              badge="Training Badge"
+            />
+            <CertificateCard
+              logo="JPMorgan"
+              title="Software Engineering Job Simulation"
+              issuer="JPMorganChase"
+              badge="Virtual Experience"
+            />
+          </div>
+        </section>
 
         {/* Skills Section */}
         <div className="grid-layout">
           <section className="section">
-            <h2 className="section-title">Coding Skills</h2>
-            <SkillBar name="Java" level={95} />
-            <SkillBar name="SpringBoot" level={95} />
+            <h2 className="section-title">Backend & Core Skills</h2>
+            <SkillBar name="Java / Core Java" level={95} />
+            <SkillBar name="Spring Boot / Microservices" level={95} />
+            <SkillBar name="AWS & Cloud Solutions" level={85} />
           </section>
 
           <section className="section">
-            <h2 className="section-title">Design Skills</h2>
-            <SkillBar name="HTML / CSS" level={100} />
+            <h2 className="section-title">Frontend & Web Skills</h2>
             <SkillBar name="JavaScript" level={90} />
+            <SkillBar name="React" level={85} />
+            <SkillBar name="HTML / CSS" level={95} />
           </section>
         </div>
       </div>
@@ -134,15 +136,17 @@ export default function Resume() {
   );
 }
 
-const CertificateCard = ({ logo, title, id, date }) => (
-  <div className="certificate-card">
-    <div className="certificate-logo">
-      <span>{logo}</span>
+const CertificateCard = ({ logo, title, issuer, badge }) => (
+  <div className="cert-card">
+    <div className="cert-logo-wrapper">
+      <span className="cert-logo-text">{logo}</span>
     </div>
-    <div className="certificate-info">
-      <h3>{title}</h3>
-      <p className="id">Company: {id}</p>
-      <p className="date">{date}</p>
+    <div className="cert-content">
+      <h3 className="cert-title">{title}</h3>
+      <div className="cert-footer">
+        <span className="cert-issuer">{issuer}</span>
+        {badge && <span className="cert-badge">{badge}</span>}
+      </div>
     </div>
   </div>
 );
@@ -161,11 +165,11 @@ const SkillBar = ({ name, level }) => (
 
 function TimelineCard({ year, college, role, description }) {
   return (
-    <div class="timeline-item">
-      <div class="timeline-date-pill">{year}</div>
-      <div class="timeline-meta">{college}</div>
-      <h3 class="timeline-title">{role}</h3>
-      <p class="timeline-text">{description}</p>
+    <div className="timeline-item">
+      <div className="timeline-date-pill">{year}</div>
+      <div className="timeline-meta">{college}</div>
+      <h3 className="timeline-title">{role}</h3>
+      <p className="timeline-text">{description}</p>
     </div>
   );
 }
