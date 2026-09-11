@@ -65,7 +65,7 @@ function HeroSection() {
                     </p>
 
                     <div className="profile-actions">
-                        <a href="https://github.com/nullsniper45/personalwebsite/blob/main/public/SainitheeshReddy_Resume.pdf" download="SainitheeshReddy_Resume.pdf">
+                        <a href="https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/SAINITHEESHREDDY_Resume.pdf" download="SainitheeshReddy_Resume.pdf">
                             <button className="btn btn-primary" >Download CV</button>
                         </a>
                         <Link className="btn btn-secondary" to="/contact">Contact</Link>
