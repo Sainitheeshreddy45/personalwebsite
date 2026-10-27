@@ -34,7 +34,7 @@
   margin: 0 24px;
   font-size: 2.5rem;
   /* Force the color and ensure it overrides any library defaults */
-  color: #4CAF50;
+  color: var(--portfolio-accent);
 
   opacity: 0.8;
   transition: all 0.3s ease;
@@ -42,7 +42,7 @@
 
 .icon-card:hover {
   opacity: 1;
-  color: #4CAF50;
+  color: var(--portfolio-accent);
   transform: translateY(-5px) scale(1.1);
   cursor: pointer;
 }
@@ -63,7 +63,7 @@
 }
 
 .about-text {
-  color: #777;
+  color: var(--portfolio-muted);
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -76,7 +76,7 @@
   transform: translate(-50%, -50%);
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(240,240,255,1) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--portfolio-accent-soft) 0%, transparent 70%);
   z-index: 0;
   border-radius: 50%;
 }

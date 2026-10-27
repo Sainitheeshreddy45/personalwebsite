@@ -1,9 +1,16 @@
 import React from 'react';
 import '../css/Footer.css';
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaLink, FaLinkedin } from 'react-icons/fa';
+import data from "../data";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const socialIcons = {
+    facebook: <FaFacebook />,
+    instagram: <FaInstagram />,
+    linkedin: <FaLinkedin />,
+    github: <FaGithub />,
+  };
 
   return (
     <footer className={`bottom container-fluid 
@@ -12,15 +19,16 @@ const Footer = () => {
         
         {/* Social Links */}
         <div className="d-flex gap-4 mb-3 mb-md-0">
-          <a href="https://www.facebook.com/DureddySainitheeshreddy" className="footer-link text-decoration-none" target='_blank' rel="noreferrer"><FaFacebook/></a>
-          <a href="https://www.instagram.com/sainitheesh45" className="footer-link text-decoration-none" target='_blank' rel="noreferrer"><FaInstagram /></a>
-          <a href="https://www.linkedin.com/in/sainitheesh-reddy-57b11b1a3/?skipRedirect=true" className="footer-link text-decoration-none" target='_blank' rel="noreferrer"><FaLinkedin /></a>
-          <a href="https://www.github.com/sainitheeshreddy45" className="footer-link text-decoration-none" target='_blank' rel="noreferrer"><FaGithub /></a>
+          {data.footer.socialLinks.map(({ name, url }) => (
+            <a href={url} className="footer-link text-decoration-none" target="_blank" rel="noreferrer" key={name}>
+              {socialIcons[name] || <FaLink />}
+            </a>
+          ))}
         </div>
 
         {/* Copyright Information */}
         <div className="copyright-text">
-          © {currentYear} Sainitheesh Reddy. All rights reserved.
+          © {currentYear} {data.footer.copyrightName}. {data.footer.copyrightNotice}
         </div>
 
       </div>

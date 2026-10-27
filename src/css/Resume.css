@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   /* align-items: baseline; */
-  border-bottom: 1px solid #eee; /* Optional divider line seen in some layouts */
+  border-bottom: 1px solid var(--portfolio-border);
   padding: 30px;
 }
 
@@ -17,7 +17,7 @@
 
 .experience-badge {
   font-size: 16px;
-  color: #999;
+  color: var(--portfolio-muted);
   font-weight: 400;
   align-items: top;
 }
@@ -54,7 +54,7 @@
   display: block;
   width: 50px;
   height: 4px;
-  background: #4caf50; /* green */
+  background: var(--portfolio-accent);
   margin-top: 8px;
 }
 
@@ -83,7 +83,7 @@
 
 .timeline-subtitle {
   font-size: 14px;
-  color: #888;
+  color: var(--portfolio-muted);
   margin-bottom: 5px;
   display: block;
   margin-left: 100px; /* Pushes "University..." to right of badge */
@@ -102,7 +102,7 @@
 
 /* Override previous .timeline-date positioning for this cleaner flex layout */
 .timeline-item {
-  border-left: 1px solid #e0e0e0;
+  border-left: 1px solid var(--portfolio-border);
   /* border-bottom: 1px solid #e0e0e0; */
   padding-left: 40px; /* Make room for the layout */
   /* padding-top: 10px; */
@@ -112,13 +112,13 @@
 
 .timeline-date-pill {
   display: inline-block;
-  border: 2px solid #4caf50;
+  border: 2px solid var(--portfolio-accent);
   border-radius: 50px;
   padding: 5px 15px;
   font-size: 13px;
   font-weight: 600;
-  color: #666;
-  background-color: #fff;
+  color: var(--bs-body-color);
+  background-color: var(--portfolio-surface);
   z-index: 1;
   /* Positioning logic to cut the line */
   position: absolute;
@@ -130,7 +130,7 @@
 .timeline-meta {
   margin-left: 10px; /* Push the university name to the right */
   font-size: 14px;
-  color: #999;
+  color: var(--portfolio-muted);
   padding-top: 6px;
 }
 
@@ -145,14 +145,14 @@
   font-size: 18px;
   font-weight: 700;
   margin: 15px 0 10px 0;
-  color: #4caf50;
+  color: var(--portfolio-accent);
 }
 
 /* The description text */
 .timeline-text {
   font-size: 14px;
   line-height: 1.6;
-  color: #777676;
+  color: var(--portfolio-muted);
   margin: 0;
 }
 
@@ -179,57 +179,119 @@
   margin-bottom: 40px;
 }
 
-/* --- Certificate Cards --- */
-.certificate-card {
-  display: flex;
-  /* background: #fff; */
-  border: 1px solid #eee;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: var(--transition);
-  cursor: pointer;
+.certificates-section {
+  margin-top: 2rem;
 }
 
-/* The Shadow Hover Effect requested */
-.certificate-card:hover {
-  transform: translateY(-5px);
-  transition: all 0.4s ease;;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 18px;
 }
 
-.certificate-logo {
-  /* background-color: #f1f1f1; */
-  padding: 30px;
+.cert-card {
   display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  min-height: 142px;
+  padding: 22px;
+  color: var(--bs-body-color);
+  background: var(--portfolio-surface);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(20, 28, 40, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--bs-border-color);
+  box-shadow: 0 12px 28px rgba(20, 28, 40, 0.12);
+}
+
+.cert-logo-wrapper {
+  display: grid;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+}
+
+.cert-logo-text {
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.cert-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 96px;
+}
+
+.cert-issuer {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 6px;
+  color: var(--portfolio-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.company-name {
+  color: var(--company-color);
+}
+
+.cert-title {
+  margin: 0;
+  color: var(--bs-emphasis-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.cert-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.cert-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-width: 100px;
-  font-weight: bold;
-  color: #666;
-  font-size: 1.2rem;
+  max-width: 100%;
+  padding: 4px 10px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
-.certificate-info {
-  padding: 20px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .cert-card {
+    transition: none;
+  }
 
-.certificate-info h3 {
-  margin: 0 0 8px 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-.certificate-info p {
-  margin: 0 0 8px 0;
-  font-size: 1rem;
-  color: #727272;
-}
-
-
-.certificate-info .id, .certificate-info .date {
-  margin: 2px 0;
-  font-size: 0.85rem;
-  color: var(--text-gray);
+  .cert-card:hover {
+    transform: none;
+  }
 }
 
 /* --- Skill Bars --- */
@@ -246,7 +308,7 @@
 }
 
 .progress-bg {
-  background-color: #eee;
+  background-color: var(--portfolio-border);
   height: 6px;
   border-radius: 10px;
   overflow: hidden;
@@ -254,7 +316,7 @@
 
 .progress-fill {
   height: 100%;
-  background-color: #4caf50;
+  background-color: var(--portfolio-accent);
   border-radius: 10px;
   transition: width 1s ease-in-out;
 }

@@ -26,16 +26,16 @@
 .nav-link {
   font-weight: 500;
   font-size: 0.95rem;
-  color: #64748b !important;
+  color: var(--portfolio-muted) !important;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #4caf50 !important;
+  color: var(--portfolio-accent-hover) !important;
 }
 
 [data-bs-theme="dark"] .nav-link:hover {
-  color: #4caf50 !important;
+  color: var(--portfolio-accent-hover) !important;
 }
 
 /* --- Theme Toggle --- */

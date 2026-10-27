@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "name": "Sainitheesh Reddy",
+    "logos": {
+      "dark": "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/logo2.png",
+      "light": "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/logo1.png"
+    },
+    "links": [
+      { "label": "Home", "path": "/home" },
+      { "label": "About", "path": "/about" },
+      { "label": "Resume", "path": "/resume" },
+      { "label": "Contact", "path": "/contact" }
+    ],
+    "themeLabel": "Theme",
+    "themeToggleLabel": "Toggle theme"
+  },
+  "hero": {
+    "name": "Sainitheesh Reddy",
+    "roles": ["Web Developer", "Full Stack Developer"],
+    "rolePrefix": "I'm a",
+    "image": "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/heroimg.jpg",
+    "imageAlt": "Sainitheesh Reddy",
+    "description": "Software Engineer experienced in building and enhancing full-stack solutions using React, Java, Spring Boot, and modern API practices. Contributed to enterprise systems at Intel with improvements in speed, code quality, and monitoring. Skilled in tools like messaging queues, Elasticsearch, and unit testing. Actively learning advanced engineering concepts to grow into a senior role",
+    "resumeUrl": "https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/SAINITHEESHREDDY_Resume.pdf",
+    "resumeFileName": "SainitheeshReddy_Resume.pdf",
+    "downloadLabel": "Download CV",
+    "contactLabel": "Contact"
+  },
+  "about": {
+    "pageTitle": "About Me",
+    "badge": "Professional Experience",
+    "illustration": "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/Person.svg",
+    "illustrationAlt": "Person at desk",
+    "heading": ["LET ME", "INTRODUCE ABOUT", "MYSELF"],
+    "paragraphs": [
+      [
+        { "text": "I am a " },
+        { "text": "Software Engineer", "emphasis": true },
+        { "text": " with over 4 years of experience at Infosys, where I optimized enterprise systems for " },
+        { "text": "Intel", "emphasis": true },
+        { "text": ", achieving a 50% reduction in API response times." }
+      ],
+      [
+        { "text": "While my core expertise is in " },
+        { "text": "Java and Spring Boot", "emphasis": true },
+        { "text": ", I have independently mastered the " },
+        { "text": "React ecosystem", "emphasis": true },
+        { "text": " and DevOps tools. I combine enterprise-level discipline with a self-starter's curiosity to build full-stack solutions that are both scalable and user-centric." }
+      ]
+    ],
+    "skills": [
+      "React", "JS", "HTML", "CSS", "Node", "MongoDB", "AWS", "Bootstrap",
+      "Java", "Docker", "SpringBoot", "GitHub", "Git", "MySQL", "ElasticSearch",
+      "Express", "Jenkins", "Groovy", "Linux", "Ansible", "Terraform",
+      "Kubernetes", "Python"
+    ]
+  },
+  "resume": {
+    "pageTitle": "Resume",
+    "badge": "3.8+ Years of Experience",
+    "educationTitle": "Education",
+    "education": [
+      {
+        "year": "2017 - 2021",
+        "institution": "Malla Reddy Institute of Technology and Sciences",
+        "role": "Computer Science & Engineering",
+        "description": "Pursued my Bachelor's degree in Computer Science and Engineering from MRITS, Hyderabad with an aggregate of 7.41 CGPA.",
+        "wideDate": true
+      },
+      {
+        "year": "2015 - 2017",
+        "institution": "Narayana Junior College",
+        "role": "MPC (Intermediate)",
+        "description": "Completed my Intermediate education from Narayana Junior College, Hyderabad in MPC with an aggregate of 96.4%."
+      },
+      {
+        "year": "2015",
+        "institution": "Sharada High School",
+        "role": "SSC",
+        "description": "Finished my schooling from Sharada High School, Nagarkurnool, with an aggregate of 9.7 CGPA."
+      }
+    ],
+    "experienceTitle": "Experience",
+    "experience": [
+      {
+        "year": "2021 - 2023",
+        "institution": "Infosys",
+        "role": "Systems Engineer",
+        "description": "Worked as a Backend Developer on Bulgarian Banking Project. Executed development tasks with 100% SLA adherence, establishing a strong foundation in banking-grade software reliability. Developed 15+ core REST API endpoints from scratch following Test-Driven Development (TDD) principles with JUnit and Mockito. Optimized database query indexing to cut CPU/memory overhead by ~25%.",
+        "wideDate": true
+      },
+      {
+        "year": "09/2021 - 04/2025",
+        "institution": "Infosys",
+        "role": "Systems Engineer (Intel IPOS-Central)",
+        "description": "Progressed into designing and optimizing large-scale backend systems. Spearheaded backend data re-engineering using parallel execution patterns, slashing API response times by 40-50%. Architected enterprise microservices using Spring Boot, gRPC, and Amazon SQS for decoupled asynchronous messaging. Integrated Elasticsearch with DynamoDB to deliver sub-second search across 1M+ records, enforced JWT security, and maintained high code quality via SonarQube.",
+        "wideDate": true
+      }
+    ],
+    "certificatesTitle": "Certificates & Badges",
+    "certificates": [
+      { "logo": "HackerRank", "title": "HackerRank SQL (Advanced)", "issuer": "HackerRank", "badge": "Verified" },
+      { "logo": "Microsoft", "title": "Azure AI Essentials Professional Certificate", "issuer": "Microsoft & LinkedIn", "badge": "Professional Cert" },
+      { "logo": "Microsoft", "title": "Microsoft Azure Essentials", "issuer": "Microsoft Press", "badge": "Verified" },
+      { "logo": "AWS", "title": "AWS Cloud Quest: Cloud Practitioner", "issuer": "Amazon Web Services", "badge": "Training Badge" },
+      { "logo": "JPMorgan", "title": "Software Engineering Job Simulation", "issuer": "JPMorganChase", "badge": "Virtual Experience" }
+    ],
+    "skillGroups": [
+      {
+        "title": "Backend & Core Skills",
+        "skills": [
+          { "name": "Java / Core Java", "level": 95 },
+          { "name": "Spring Boot / Microservices", "level": 95 },
+          { "name": "AWS & Cloud Solutions", "level": 85 }
+        ]
+      },
+      {
+        "title": "Frontend & Web Skills",
+        "skills": [
+          { "name": "JavaScript", "level": 90 },
+          { "name": "React", "level": 85 },
+          { "name": "HTML / CSS", "level": 95 }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "pageTitle": "Contact",
+    "badge": "Get in Touch",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.4354420756688!2d78.30039776956262!3d16.48860829901583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bca6b007d70818b%3A0xf449ad0d1e1dc5b6!2sShailaja%20nilayam!5e0!3m2!1sen!2sin!4v1770086763345!5m2!1sen!2sin",
+    "mapTitle": "Contact Location Map",
+    "details": [
+      { "icon": "bi-phone", "value": "85004 42994", "description": "Feel free to contact me at this number." },
+      { "icon": "bi-geo-alt-fill", "value": "Telangana, India", "description": "Willing to relocate." },
+      { "icon": "bi-envelope-at-fill", "value": "sainitheeshreddy45@gmail.com", "description": "Please contact me direct at this Email Id." }
+    ],
+    "formTitle": "How Can I Help You?",
+    "fields": [
+      { "type": "text", "name": "from_name", "placeholder": "Full Name" },
+      { "type": "email", "name": "reply_to", "placeholder": "Email Address" },
+      { "type": "text", "name": "subject", "placeholder": "Subject" },
+      { "type": "textarea", "name": "message", "placeholder": "Message" }
+    ],
+    "submitLabel": "Send message",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "socialLinks": [
+      { "name": "facebook", "url": "https://www.facebook.com/DureddySainitheeshreddy" },
+      { "name": "instagram", "url": "https://www.instagram.com/sainitheesh45" },
+      { "name": "linkedin", "url": "https://www.linkedin.com/in/sainitheesh-reddy-57b11b1a3/?skipRedirect=true" },
+      { "name": "github", "url": "https://www.github.com/sainitheeshreddy45" }
+    ],
+    "copyrightName": "Sainitheesh Reddy",
+    "copyrightNotice": "All rights reserved."
+  }
+}

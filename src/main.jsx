@@ -6,15 +6,10 @@ import './index.css'
 import App from './App.jsx'
 import { HashRouter } from 'react-router-dom' // 1. Changed from BrowserRouter
 
-const updateTheme = () => {
-  const savedTheme = localStorage.getItem('user-theme');
-  const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-bs-theme', theme);
-};
-
-updateTheme();
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+const savedTheme = localStorage.getItem('user-theme');
+const initialTheme =
+  savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+document.documentElement.setAttribute('data-bs-theme', initialTheme);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

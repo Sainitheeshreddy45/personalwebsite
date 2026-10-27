@@ -1,16 +1,21 @@
-# React + Vite
+# Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Updating portfolio content
 
-Currently, two official plugins are available:
+Edit [`src/data.txt`](./src/data.txt) to update the profile, about text, skills,
+education, experience, certificates, contact details, navigation, and social
+links. The file uses JSON syntax even though it has a `.txt` extension:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Keep property names and text values in double quotes.
+- Separate entries in lists with commas.
+- New about-page skills will use a generic icon unless an icon is added for
+  them in `src/components/About.jsx`.
 
-## React Compiler
+The data is included in the built site, so run `npm run dev` to preview edits
+and rebuild/redeploy the site to publish them.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` starts the development server.
+- `npm run lint` checks the project with ESLint.
+- `npm run build` creates the production build.

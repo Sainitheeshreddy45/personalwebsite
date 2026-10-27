@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../css/Navbar.css';
+import data from "../data";
 
 const Navbar = () => {
-    const LOGO_URLS = {
-        dark: "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/logo2.png",
-        light: "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/logo1.png"
-    };
-
     const [theme, setThemeState] = useState(() => {
         const saved = localStorage.getItem('user-theme');
         return saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -28,12 +24,12 @@ const Navbar = () => {
         <div className="container-fluid">
           <img
             className="navbar-brand mx-3"
-            src={LOGO_URLS[theme]}
+            src={data.navbar.logos[theme]}
             alt="Logo"
             height="40"
           ></img>
           <Link className="navbar-brand mx-3" to="/home">
-            Sainitheesh Reddy
+          {data.navbar.name}
           </Link>
           <button
             className="navbar-toggler"
@@ -48,32 +44,17 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item mx-3">
-                <Link className="nav-link" aria-current="page" to="/home">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link className="nav-link" aria-current="page" to="/resume">
-                  Resume
-                </Link>
-              </li>
-              <li className="nav-item mx-3">
-                <Link className="nav-link" aria-current="page" to="/contact">
-                  Contact
-                </Link>
-              </li>
+              {data.navbar.links.map(({ label, path }) => (
+                <li className="nav-item mx-3" key={path}>
+                  <Link className="nav-link" to={path}>{label}</Link>
+                </li>
+              ))}
               <li className="nav-item mx-3 d-flex align-items-center gap-2">
-                <span className="nav-link theme-item">Theme</span>
+                <span className="nav-link theme-item">{data.navbar.themeLabel}</span>
                 <button
                   className={`mode-toggle ${theme}`}
                   onClick={toggleTheme}
-                  aria-label="Toggle theme"
+                  aria-label={data.navbar.themeToggleLabel}
                 >
                   <span className="track">
                     <span className="icon sun">

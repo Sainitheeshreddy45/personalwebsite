@@ -18,7 +18,7 @@
 .profile-ring {
   /* padding: 10px; */
   border-radius: 50%;
-  border: 14px solid #f1f1f1;
+  border: 14px solid var(--portfolio-surface);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -76,12 +76,12 @@
 
 /* Primary button */
 .profile-actions .btn-primary {
-  background-color: #4CAF50;
+  background-color: var(--portfolio-accent);
   color: #ffffff;
 }
 
 .profile-actions .btn-primary:hover {
-  background-color: #4CAF50;
+  background-color: var(--portfolio-accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
@@ -89,12 +89,12 @@
 /* Secondary button */
 .profile-actions .btn-secondary {
   background-color: transparent;
-  color: #4CAF50;
-  border: 1px solid #4CAF50;
+  color: var(--portfolio-accent);
+  border: 1px solid var(--portfolio-accent);
 }
 
 .profile-actions .btn-secondary:hover {
-  background-color: #4CAF50;
+  background-color: var(--portfolio-accent);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);

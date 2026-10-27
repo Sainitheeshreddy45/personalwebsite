@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/HeroSection.css";
-
-
-const titles = ["Web Developer", "Full Stack Developer"];
+import data from "../data";
 
 function HeroSection() {
-    const hero = "https://raw.githubusercontent.com/Sainitheeshreddy45/personalwebsite/main/src/assets/heroimg.jpg";
     const [text, setText] = useState("");
     const [titleIndex, setTitleIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
@@ -14,7 +11,7 @@ function HeroSection() {
     // const cycle = useRef(0);
 
     useEffect(() => {
-        const currentTitle = titles[titleIndex];
+        const currentTitle = data.hero.roles[titleIndex];
         let timeout;
 
         // if(cycle.current == 6) return;
@@ -33,8 +30,10 @@ function HeroSection() {
             // cycle.current +=1;
             timeout = setTimeout(() => setIsDeleting(true), 1200); // pause before delete
         } else if (isDeleting && charIndex === 0) {
-            setIsDeleting(false);
-            setTitleIndex((prev) => (prev + 1) % titles.length);
+            timeout = setTimeout(() => {
+                setIsDeleting(false);
+                setTitleIndex((prev) => (prev + 1) % data.hero.roles.length);
+            }, 0);
         }
 
         return () => clearTimeout(timeout);
@@ -47,28 +46,21 @@ function HeroSection() {
             >
                 <div className="profile-image-wrapper">
                     <div className="profile-ring">
-                        <img src={hero} alt="Sainitheesh Reddy" className="profile-image" />
+                        <img src={data.hero.image} alt={data.hero.imageAlt} className="profile-image" />
                     </div>
                 </div>
 
                 <div className="profile-content">
-                    <h1 className="profile-name">Sainitheesh Reddy</h1>
-                    <span className="profile-role">I'm a {text}|</span>
+                    <h1 className="profile-name">{data.hero.name}</h1>
+                    <span className="profile-role">{data.hero.rolePrefix} {text}|</span>
 
-                    <p className="profile-description">
-                        Software Engineer experienced in building and enhancing full‑stack
-                        solutions using React, Java, Spring Boot, and modern API practices.
-                        Contributed to enterprise systems at Intel with improvements in
-                        speed, code quality, and monitoring. Skilled in tools like messaging
-                        queues, Elasticsearch, and unit testing. Actively learning advanced
-                        engineering concepts to grow into a senior role
-                    </p>
+                    <p className="profile-description">{data.hero.description}</p>
 
                     <div className="profile-actions">
-                        <a href="https://github.com/Sainitheeshreddy45/personalwebsite/blob/main/SAINITHEESHREDDY_Resume.pdf" download="SainitheeshReddy_Resume.pdf">
-                            <button className="btn btn-primary" >Download CV</button>
+                        <a href={data.hero.resumeUrl} download={data.hero.resumeFileName}>
+                            <button className="btn btn-primary">{data.hero.downloadLabel}</button>
                         </a>
-                        <Link className="btn btn-secondary" to="/contact">Contact</Link>
+                        <Link className="btn btn-secondary" to="/contact">{data.hero.contactLabel}</Link>
                     </div>
                 </div>
             </section>
